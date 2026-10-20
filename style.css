@@ -479,28 +479,40 @@ html {
 
 @media(max-width : 600px){
 
-    .navbar{
-        padding: 14px 4%;    
-        gap: 14px;
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 14px 10px;
+        padding: 14px 4%;
 
         .brand{
+            grid-column: 1;
+            grid-row: 1;
             font-size: 21px;
         }
 
-        nav{
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .nav-link{
-            font-size: 12px;
-        }
-
         .contact-btn{
+            grid-column: 2;
+            grid-row: 1;
+            justify-self: end;
             padding: 10px 12px;
             font-size: 12px;
         }
+
+        nav{
+            grid-column: 1 / -1;
+            grid-row: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: nowrap;
+            min-width: 0;
+
+        }
     }
+
     
 
     .hero{
