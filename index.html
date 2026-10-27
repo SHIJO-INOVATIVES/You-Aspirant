@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You Aspirant | Career Guidance</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-   <header class="navbar" id="home">
+    <header class="navbar" id="home">
         <a href="#home" class="brand">
             You<span>Aspirant.</span>
         </a>
@@ -20,16 +22,20 @@
             <a href="#testimonials" class="nav-link">Stories</a>
         </nav>
 
-        <a href="#contact" class="contact-btn">
-            Let's Talk <span>↗</span>
-        </a>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                title="Toggle dark mode">🌙</button>
+            <a href="#contact" class="contact-btn">
+                Let's Talk <span>↗</span>
+            </a>
+        </div>
     </header>
 
     <main>
         <section class="hero" id="about">
 
             <div class="hero-content">
-                
+
                 <p class="hero-tag">YOUR FUTURE STARTS HERE</p>
 
                 <h1>Discover Your Path. <br> Build Your Future.</h1>
@@ -40,7 +46,7 @@
                 </p>
 
                 <a href="#" id="hero-btn">Explore Programs -></a>
-                
+
             </div>
 
 
@@ -94,7 +100,7 @@
             <h2>Hear It From Our Students</h2>
 
             <p class="testimonials-description">
-                Real experiences  that inspire the next step.
+                Real experiences that inspire the next step.
             </p>
 
             <div class="testimonial-cards">
@@ -132,114 +138,121 @@
 
         </section>
 
-        
+
         <section class="contact-section" id="contact">
             <div class="contact-info">
-            <p class="section-tag">LET'S GET STARTED</p>
+                <p class="section-tag">LET'S GET STARTED</p>
 
-            <h2>Your Future Begins With One Step.</h2>
+                <h2>Your Future Begins With One Step.</h2>
 
-            <p class="contact-description">
-                Tell us what you're aiming for. We'll help you
-                explore the right career guidance and training
-                opportunities for your future.
-            </p>
+                <p class="contact-description">
+                    Tell us what you're aiming for. We'll help you
+                    explore the right career guidance and training
+                    opportunities for your future.
+                </p>
 
-            <div class="contact-benefit">
-                <span>✓</span> Personalized career guidance
+                <div class="contact-benefit">
+                    <span>✓</span> Personalized career guidance
+                </div>
+
+                <div class="contact-benefit">
+                    <span>✓</span> Practical skill development
+                </div>
+
+                <div class="contact-benefit">
+                    <span>✓</span> Support for your career goals
+                </div>
             </div>
 
-            <div class="contact-benefit">
-                <span>✓</span> Practical skill development
-            </div>
+            <form class="enquiry-form" action="#" method="post">
+                <h3>Get in Touch</h3>
+                <p>Share your details to get started.</p>
 
-            <div class="contact-benefit">
-                <span>✓</span> Support for your career goals
-            </div>
-        </div>
+                <label for="student-name">Full Name</label>
+                <input type="text" id="student-name" name="name" placeholder="Enter your full name" required>
 
-        <form class="enquiry-form" action="#" method="post">
-            <h3>Get in Touch</h3>
-            <p>Share your details to get started.</p>
+                <label for="student-email">Email Address</label>
+                <input type="email" id="student-email" name="email" placeholder="Enter your email" required>
 
-            <label for="student-name">Full Name</label>
-            <input
-                type="text"
-                id="student-name"
-                name="name"
-                placeholder="Enter your full name"
-                required
-            >
+                <label for="student-phone">Phone Number</label>
+                <input type="tel" id="student-phone" name="phone" placeholder="Enter your phone number" required>
 
-            <label for="student-email">Email Address</label>
-            <input
-                type="email"
-                id="student-email"
-                name="email"
-                placeholder="Enter your email"
-                required
-            >
+                <label for="student-interest">I'm Interested In</label>
+                <select id="student-interest" name="interest" required>
+                    <option value="">Choose a program</option>
+                    <option value="career-guidance">Career Guidance</option>
+                    <option value="skill-development">Skill Development</option>
+                    <option value="career-preparation">Career Preparation</option>
+                </select>
 
-            <label for="student-phone">Phone Number</label>
-            <input
-                type="tel"
-                id="student-phone"
-                name="phone"
-                placeholder="Enter your phone number"
-                required
-            >
-
-            <label for="student-interest">I'm Interested In</label>
-            <select id="student-interest" name="interest" required>
-                <option value="">Choose a program</option>
-                <option value="career-guidance">Career Guidance</option>
-                <option value="skill-development">Skill Development</option>
-                <option value="career-preparation">Career Preparation</option>
-            </select>
-
-            <button type="submit">Submit Enquiry →</button>
+                <button type="submit">Submit Enquiry →</button>
 
             </form>
-            
+
         </section>
 
         <footer class="footer">
-        <div class="footer-content">
+            <div class="footer-content">
 
-            <div class="footer-brand">
-                <h2>You Aspirant</h2>
-                <p>
-                    Discover your potential, build your skills,
-                    and take the next step toward your dream career.
-                </p>
+                <div class="footer-brand">
+                    <h2>You Aspirant</h2>
+                    <p>
+                        Discover your potential, build your skills,
+                        and take the next step toward your dream career.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Start Your Journey</h3>
+                    <p>Ready to plan your future?</p>
+                    <a href="#contact" class="footer-btn">
+                        Get in Touch →
+                    </a>
+                </div>
+
             </div>
 
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+            <div class="footer-bottom">
+                <p>© 2026 You Aspirant. All rights reserved.</p>
+                <p>Learn Today. Lead Tomorrow.</p>
             </div>
-
-            <div class="footer-contact">
-                <h3>Start Your Journey</h3>
-                <p>Ready to plan your future?</p>
-                <a href="#contact" class="footer-btn">
-                    Get in Touch →
-                </a>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2026 You Aspirant. All rights reserved.</p>
-            <p>Learn Today. Lead Tomorrow.</p>
-        </div>
-    </footer>
+        </footer>
 
 
     </main>
 
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            root.setAttribute('data-theme', savedTheme);
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                root.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.textContent = '🌙';
+            } else {
+                root.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.textContent = '☀️';
+            }
+        });
+    </script>
+
 </body>
+
 </html>

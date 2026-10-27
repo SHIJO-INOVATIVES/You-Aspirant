@@ -5,11 +5,67 @@
     --background : #f7f2ff;
     --border : #e6dfe6;
     --head3 : #52218a;
+    --nav-bg: rgba(255, 255, 255, 0.96);
+    --nav-border: #eadfff;
+    --nav-shadow: 0 4px 20px rgba(45, 23, 72, 0.06);
+    --nav-link: #514360;
+    --navbar-brand: #2d1748;
+    --hero-bg-1: #faf7ff;
+    --hero-bg-2: #eee3ff;
+    --services-bg: #ffffff;
+    --testimonial-card-bg: #ffffff;
+    --contact-bg-1: #faf7ff;
+    --contact-bg-2: #eee3ff;
+    --form-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #d8cbe8;
+    --footer-bg: #2d1748;
+    --footer-brand: #d9c1ff;
+    --footer-text: #d4c9e2;
+    --footer-border: #59436f;
+    --footer-btn-bg: #8c52d6;
+    --footer-btn-hover: #a675e8;
+    --toggle-bg: #e6dfe6;
+    --toggle-color: #2d1748;
+}
+
+[data-theme="dark"] {
+    --button-color : #a675e8;
+    --heading : #e6d9ff;
+    --para : #cbbbdc;
+    --background : #1a1025;
+    --border : #3d2b52;
+    --head3 : #d9c1ff;
+    --nav-bg: rgba(26, 16, 37, 0.96);
+    --nav-border: #3d2b52;
+    --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --nav-link: #cbbbdc;
+    --navbar-brand: #e6d9ff;
+    --hero-bg-1: #1a1025;
+    --hero-bg-2: #251a33;
+    --services-bg: #1f162b;
+    --testimonial-card-bg: #251a33;
+    --contact-bg-1: #1a1025;
+    --contact-bg-2: #251a33;
+    --form-bg: #251a33;
+    --input-bg: #1f162b;
+    --input-border: #3d2b52;
+    --footer-bg: #140d1f;
+    --footer-brand: #d9c1ff;
+    --footer-text: #cbbbdc;
+    --footer-border: #3d2b52;
+    --footer-btn-bg: #8c52d6;
+    --footer-btn-hover: #a675e8;
+    --toggle-bg: #3d2b52;
+    --toggle-color: #e6d9ff;
 }
 
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--services-bg);
+    color: var(--para);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -28,12 +84,13 @@ html {
     gap: 30px;
 
     padding: 18px 6%;
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid #eadfff;
-    box-shadow: 0 4px 20px rgba(45, 23, 72, 0.06);
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
+    box-shadow: var(--nav-shadow);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
     .brand {
-        color: #2d1748;
+        color: var(--navbar-brand);
         font-size: 25px;
         font-weight: 800;
         letter-spacing: -1px;
@@ -54,7 +111,7 @@ html {
     .nav-link{
         position: relative;
         padding: 8px 0;
-        color: #514360;
+        color: var(--nav-link);
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -82,6 +139,31 @@ html {
 
     .nav-link:hover::after,.nav-link.active::after{
         transform: scaleX(1);
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--toggle-bg);
+        color: var(--toggle-color);
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+    }
+
+    .theme-toggle:hover {
+        transform: translateY(-2px);
     }
 
     .contact-btn{
@@ -122,7 +204,8 @@ html {
     display: flex;
     align-items: center;
     gap: 50px;
-    background: linear-gradient(135deg, #faf7ff, #eee3ff);
+    background: linear-gradient(135deg, var(--hero-bg-1), var(--hero-bg-2));
+    transition: background 0.3s ease;
 
     .hero-content{
 
@@ -174,7 +257,8 @@ html {
 .services{
     padding: 70px 6%;
     text-align: center;
-    background-color: #ffffff;
+    background-color: var(--services-bg);
+    transition: background-color 0.3s ease;
 
     .service-tag{
         color: var(--button-color);
@@ -231,6 +315,7 @@ html {
     padding: 70px 6%;
     text-align: center;
     background-color: var(--background);
+    transition: background-color 0.3s ease;
 
     h2{
         font-size: 32px;
@@ -246,10 +331,10 @@ html {
         .testimonial-card{
             flex: 1;
             padding: 28px;
-            background-color: #ffffff;
+            background-color: var(--testimonial-card-bg);
             border: 1px solid var(--border);
             border-radius: 15px;
-            transition: 0.3s ease;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 
             .stars{
                 color: #e0a326;
@@ -286,7 +371,8 @@ html {
     display: flex;
     align-items: center;
     gap: 60px;
-    background: linear-gradient(135deg, #faf7ff, #eee3ff);
+    background: linear-gradient(135deg, var(--contact-bg-1), var(--contact-bg-2));
+    transition: background 0.3s ease;
 
     .contact-info{
         flex: 1;
@@ -321,11 +407,12 @@ html {
         flex: 1;
         max-width: 480px;
         padding: 32px;
-        background-color: #ffffff;
+        background-color: var(--form-bg);
         border: 1px solid var(--border);
         border-radius: 18px;
         box-shadow: 0 12px 35px rgba(82, 33, 138, 0.08);
         box-sizing: border-box;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
 
         h3{
             margin-top: 0;
@@ -349,11 +436,13 @@ html {
         input,select{
             width: 100%;
             padding: 12px;
-            border: 1px solid #d8cbe8;
+            border: 1px solid var(--input-border);
             border-radius: 8px;
             font-size: 14px;
             box-sizing: border-box;
-            background-color: #ffffff;
+            background-color: var(--input-bg);
+            color: var(--para);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         input,select:focus{
@@ -384,8 +473,9 @@ html {
 
 .footer {
     padding: 55px 6% 20px;
-    background-color: #2d1748;
+    background-color: var(--footer-bg);
     color: #ffffff;
+    transition: background-color 0.3s ease;
 
     .footer-content {
         display: flex;
@@ -399,13 +489,13 @@ html {
             max-width: 350px;
 
             h2{
-                color: #d9c1ff;
+                color: var(--footer-brand);
                 font-size: 25px;
                 margin-top: 0;
             }
 
             p{
-                color: #d4c9e2;
+                color: var(--footer-text);
                 line-height: 1.8;
             }
         }
@@ -422,7 +512,7 @@ html {
             }
 
             a{
-                color: #d4c9e2;
+                color: var(--footer-text);
                 text-decoration: none;
                 transition: 0.3s ease;
             }
@@ -435,26 +525,26 @@ html {
 
         .footer-contact{
 
-            p{
-                color: #d4c9e2;
-                margin-top: 0;
-            }
+        p{
+            color: var(--footer-text);
+            margin-top: 0;
+        }
 
-            .footer-btn {
-                display: inline-block;
-                width: fit-content;
-                padding: 12px 18px;
-                border-radius: 8px;
-                background-color: #8c52d6;
-                color: #ffffff;
-                text-decoration: none;
-                transition: 0.3s ease;
-            }
+        .footer-btn {
+            display: inline-block;
+            width: fit-content;
+            padding: 12px 18px;
+            border-radius: 8px;
+            background-color: var(--footer-btn-bg);
+            color: #ffffff;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
 
-            .footer-btn:hover {
-                background-color: #a675e8;
-                transform: translateY(-2px);
-            }
+        .footer-btn:hover {
+            background-color: var(--footer-btn-hover);
+            transform: translateY(-2px);
+        }
  
         }
     }
@@ -463,9 +553,9 @@ html {
         display: flex;
         justify-content: space-between;
         gap: 15px;
-        border-top: 1px solid #59436f;
+        border-top: 1px solid var(--footer-border);
         padding-top: 20px;
-        color: #cbbbdc;
+        color: var(--footer-text);
         font-size: 13px;
 
         p{
