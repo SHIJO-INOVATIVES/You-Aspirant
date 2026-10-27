@@ -187,6 +187,8 @@
 
                 <button type="submit">Submit Enquiry →</button>
 
+                <p id="form-message" role="status"></p>
+
             </form>
 
         </section>
@@ -251,6 +253,17 @@
                 themeToggle.textContent = '☀️';
             }
         });
+
+
+        const enquiryForm = document.querySelector(".enquiry-form");
+        const formMessage = document.getElementById("form-message");
+
+        enquiryForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            formMessage.textContent = "Thank you! Your enquiry has been received 💜";
+        });
+
     </script>
 
 </body>
